@@ -28,6 +28,12 @@ header {
     text-align: center;
     
 }
+header h2{
+    color:#acc811;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(217, 217, 217);
+    font-weight: bold;
+}
 .form h2 {
     text-align: left;
     color: #f9f9f9;
@@ -53,6 +59,7 @@ section.form {
     background-color:#452b76;
     padding: 16px 40px;
     border-radius: 6px;
+    
 
 
 }

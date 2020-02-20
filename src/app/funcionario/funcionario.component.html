@@ -1,0 +1,94 @@
+<head>
+    <title>Funcionarios</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../../assets/logoMultiedro.png" alt="">
+        <h2>Controle de Funcionarios</h2>
+        <button id="newdep">Novo Funcionario</button>
+        <button routerLink="/menu" id="newvolt"> Voltar</button>
+
+    </header>
+
+
+    <section class="form hide">
+        <form action="/" method="POST">
+            <div class="card">
+                <div class="card-header">
+                    Informações sobre o Funcionario
+                </div>
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="name">E-mail</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="name">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword">
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="name">Departamento</label>
+                            <input type="text" class="form-control" id="depar">
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="name">Admin</label>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1">
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm float-right p-2 ">Salvar</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </section>
+    <main>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Senha</th>
+                    <th scope="col">Departamento</th>
+                    <th scope="col">Admin</th>
+                    <th scope="col" id="acoes">Ações</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let funcionario of funcionarios">
+                <tr>
+                    <td>{{funcionario.id}}</td>
+                    <td>{{funcionario.name}}</td>
+                    <td>{{funcionario.email}}</td>
+                    <td>{{funcionario.senha}}</td>
+                    <td>{{funcionario.departamento}}</td>
+                    <td>{{funcionario.admin}}</td>
+                    <td><button (click)="editar(funcionario.id)"
+                            class=" btn btn-outline-info btn-sm mr-2">Editar</button>
+                        <button (click)="deletar(funcionario.id)"
+                            class=" btn btn-outline-danger btn-sm">Excluir</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </main>
+
+
+</body>
+
+<router-outlet></router-outlet>

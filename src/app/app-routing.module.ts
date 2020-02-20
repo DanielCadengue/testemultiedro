@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
-import { DepartamentosComponent } from './departamentos/departamentos.component';
-import { FuncionariosComponent } from './funcionarios/funcionarios.component';
+import { DepartamentoComponent } from './departamento/departamento.component';
+import { FuncionarioComponent } from './funcionario/funcionario.component';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'menu', component: MenuComponent },
-  { path: 'departamentos', component: DepartamentosComponent },
-  { path: 'funcionarios', component: FuncionariosComponent },
+  { path: 'departamento', component: DepartamentoComponent },
+  { path: 'funcionario', component: FuncionarioComponent },
 ];
 
 @NgModule({
