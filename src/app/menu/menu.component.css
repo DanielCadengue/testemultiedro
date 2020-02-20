@@ -26,12 +26,12 @@ body {
 header{
     text-align: center;
 }
-.container h2 {
+div h2 {
     text-align: left;
     color: #f9f9f9;
     font-size: 30px;
 }
-header, .container {
+header, div {
     margin:0 auto 70px auto;
     width: 90%;
     max-width: 550px;
@@ -44,10 +44,10 @@ h2{
     border-bottom: 1px solid rgb(217, 217, 217);
 
 }
-div.container {
+div {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
     
+ 
     align-items: center;
     background-color:#4b2779;
     padding: 16px 40px;
@@ -56,9 +56,9 @@ div.container {
   
 }
 button#dep {
-    margin-left: 50%;
-    margin-bottom: 100px;
-    width: 100%;
+    margin-left: 25%;
+    margin-top: 10px;
+    width: 50%;
     padding: 5px;
     border-radius: 4px;
     background-color: #0babb9;
@@ -68,9 +68,8 @@ button#dep {
 }
 
 button#fun {
-    margin-right:50% ;
-    margin-top: 100px;
-    width: 100%;
+    margin-left: 25%;
+    width: 50%;
     padding: 5px;
     border-radius: 4px;
     background-color: #4565ac;
@@ -78,6 +77,9 @@ button#fun {
     color: #f9f9f9;
     font-weight:bold;
 }
-a {
-    text-align: center;
+a{
+    
+    margin-left: 47%;
+    border: none;
+    color: white;
 }
